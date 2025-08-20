@@ -587,7 +587,7 @@ class UIR_PolyKernel(nn.Module):
         inp_enc_level2 = self.down1_2(out_enc_level1)
         out_enc_level2 = self.encoder_level2(inp_enc_level2)
         # aha1_output = self.attention_lka1_to_lka2(out_enc_level2)
-        inp_enc_level3 = self.down2_3(aha1_output)
+        inp_enc_level3 = self.down2_3(out_enc_level2)
         out_enc_level3 = self.encoder_level3(inp_enc_level3)
         # aha2_output = self.attention_lka2_to_csc(out_enc_level3)
         # latent = self.bottleneck(aha2_output)
